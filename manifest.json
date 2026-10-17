@@ -1,0 +1,22 @@
+
+{
+  "manifest_version": 3,
+  "name": "QueueRadar",
+  "version": "0.0.1",
+  "description": "Find QR codes and useful links in Gmail.",
+  "permissions": [
+    "identity"
+  ],
+  "host_permissions": [
+    "https://gmail.googleapis.com/*"
+  ],
+  "oauth2": {
+    "client_id": "970816817225-nhv69p588qjt6devmv32940hss420rhd.apps.googleusercontent.com",
+    "scopes": [
+      "https://www.googleapis.com/auth/gmail.readonly"
+    ]
+  },
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
