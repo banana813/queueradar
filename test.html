@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Email Scanner Test</title>
+</head>
+
+<body>
+
+    <h1>Email Analysis Test</h1>
+
+    <h3>Email Subject</h3>
+
+    <input
+        type="text"
+        id="subject"
+        value="Robotics Competition"
+    >
+
+    <h3>Email Body</h3>
+
+    <textarea
+        id="emailBody"
+        rows="10"
+        cols="60"
+    >Hello students! Please register for the robotics competition by October 23. The competition will take place on November 5 at 9 AM.</textarea>
+
+    <br><br>
+
+    <button id="analyzeButton">
+        Analyze Email
+    </button>
+
+    <h2>Results:</h2>
+
+    <pre id="results"></pre>
+
+
+    <script src="analysis.js"></script>
+
+    <script>
+
+        document.getElementById("analyzeButton")
+            .addEventListener("click", function() {
+
+                let subject =
+                    document.getElementById("subject").value;
+
+                let body =
+                    document.getElementById("emailBody").value;
+
+                let email = {
+
+                    subject: subject,
+
+                    body: body,
+
+                    qrLinks: [
+                        "https://example.com/register"
+                    ]
+
+                };
+
+                let result = analyzeEmail(email);
+
+                document.getElementById("results").textContent =
+                    JSON.stringify(result, null, 4);
+
+            });
+
+    </script>
+
+</body>
+
+</html>

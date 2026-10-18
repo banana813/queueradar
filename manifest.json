@@ -12,7 +12,7 @@
     "https://generativelanguage.googleapis.com/*"
   ],
   "oauth2": {
-    "client_id": "970816817225-nhv69p588qjt6devmv32940hss420rhd.apps.googleusercontent.com",
+    "client_id": "970816817225-aolmmisvbbinkgi12lm2beptotrck2ph.apps.googleusercontent.com",
     "scopes": [
       "https://www.googleapis.com/auth/gmail.readonly"
     ]
