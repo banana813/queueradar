@@ -1,0 +1,273 @@
+
+:root {
+  --blue: #dff3ff;
+  --blue-dark: #168aad;
+  --green: #d9fbe5;
+  --green-dark: #198754;
+  --background: #f5fbff;
+  --surface: #ffffff;
+  --text: #183344;
+  --muted: #66808d;
+  --border: #dcebf0;
+  --shadow: 0 4px 14px rgba(24, 80, 100, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 360px;
+  min-height: 300px;
+  margin: 0;
+  padding: 20px;
+  background: var(--background);
+  color: var(--text);
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 14px;
+}
+
+h1, h2, h3 {
+  margin: 0;
+  color: var(--text);
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: 750;
+  letter-spacing: -0.8px;
+}
+
+h2 {
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+
+p {
+  margin: 8px 0;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.logo {
+  display: grid;
+  width: 44px;
+  height: 44px;
+  place-items: center;
+  border-radius: 14px;
+  background: linear-gradient(135deg, var(--blue), var(--green));
+  font-size: 23px;
+}
+
+.subtitle {
+  margin-top: 3px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+button {
+  width: 100%;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 12px;
+  background: var(--green-dark);
+  color: white;
+  font-size: 14px;
+  font-weight: 650;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+button:hover {
+  background: #126b42;
+  transform: translateY(-1px);
+}
+
+button:disabled {
+  background: #91b9a3;
+  cursor: wait;
+  transform: none;
+}
+
+#status {
+  margin: 12px 0 16px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+#qrList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#qrList li {
+  padding: 14px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  overflow-wrap: anywhere;
+}
+
+#qrList li strong {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--blue-dark);
+  font-size: 14px;
+}
+
+#qrList li p {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.6;
+  white-space: pre-line;
+}
+
+#qrList li p:first-of-type {
+  padding: 8px;
+  border-radius: 8px;
+  background: var(--blue);
+  color: var(--text);
+  overflow-wrap: anywhere;
+}
+
+a {
+  color: var(--blue-dark);
+  overflow-wrap: anywhere;
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: white;
+  color: var(--text);
+  font: inherit;
+}
+
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 3px solid #83d9ed;
+  outline-offset: 2px;
+}
+
+
+/* QueueRadar visual refresh */
+
+body {
+  background: linear-gradient(160deg, #f0f9ff 0%, #f5fff8 100%);
+  color: #193b4a;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* Header */
+header {
+  padding-bottom: 14px;
+  border-bottom: 1px solid #d8eaf0;
+}
+
+h1 {
+  color: #176b83;
+  letter-spacing: -0.7px;
+}
+
+.subtitle {
+  color: #64818c;
+}
+
+/* Main scan button */
+button {
+  background: linear-gradient(110deg, #168aad, #24a875);
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(22, 138, 130, 0.18);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+button:hover:not(:disabled) {
+  background: linear-gradient(110deg, #117795, #198d60);
+  box-shadow: 0 6px 14px rgba(22, 138, 130, 0.24);
+  transform: translateY(-1px);
+}
+
+button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+button:disabled {
+  box-shadow: none;
+}
+
+/* Status message */
+#status {
+  padding: 9px 11px;
+  border: 1px solid #d8edf2;
+  border-radius: 9px;
+  background: rgba(255, 255, 255, 0.8);
+  color: #477181;
+  line-height: 1.5;
+}
+
+/* Result cards */
+#qrList {
+  gap: 14px;
+}
+
+#qrList > li {
+  padding: 15px;
+  border: 1px solid #dcebf0;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 4px 14px rgba(30, 90, 110, 0.07);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+#qrList > li:hover {
+  border-color: #a8dfd0;
+  box-shadow: 0 6px 18px rgba(30, 90, 110, 0.11);
+}
+
+#qrList > li > strong {
+  display: block;
+  margin-bottom: 8px;
+  color: #168aad;
+  font-size: 14px;
+}
+
+#qrList > li > p {
+  margin-top: 8px;
+  color: #466674;
+  font-size: 12px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+/* Links and focus states */
+a {
+  color: #168aad;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  color: #198754;
+}
+
+button:focus-visible {
+  outline: 3px solid #8bd9e8;
+  outline-offset: 3px;
+}

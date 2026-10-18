@@ -8,7 +8,8 @@
     "identity"
   ],
   "host_permissions": [
-    "https://gmail.googleapis.com/*"
+    "https://gmail.googleapis.com/*",
+    "https://generativelanguage.googleapis.com/*"
   ],
   "oauth2": {
     "client_id": "970816817225-nhv69p588qjt6devmv32940hss420rhd.apps.googleusercontent.com",
